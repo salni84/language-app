@@ -1,0 +1,23 @@
+.welcome {
+  display: block;
+  background-color: darkorange;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 2em;
+}
+
+.title, .text {
+  font-size: 2em;
+}
+
+.buttons {
+  margin: 1em;
+
+  .learn-words, .record-words, .word-test{
+    margin: 1em;
+    height: 2em;
+    font-size: 2em;
+  }
+}

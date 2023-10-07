@@ -1,0 +1,21 @@
+
+<div class="container">
+  <ng-container *ngFor="let word of words; index as i">
+    <div class="word">
+      <p class="germanWord">{{word.word}}</p>
+
+      <div class="hideAndShow" [hidden]="visibleElement !== i">
+
+        <p class="translatedWord">{{word.translation}}</p>
+
+        <audio class="audio-file" controls *ngIf="word.audio">
+          <source [src]="word.audio" type="audio/wav">
+        </audio>
+
+      </div>
+      <button (click)="showTranslation(i)">{{showTranslationAndAudio ? 'Verberge Übersetzung' : 'Zeige übersetzung'}}</button>
+    </div>
+  </ng-container>
+</div>
+
+

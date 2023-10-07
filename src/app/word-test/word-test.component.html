@@ -1,0 +1,13 @@
+<div class="container">
+  <button (click)="startTest()">neues Wort</button>
+  <div class="singleWord">
+    {{currentWord.word}}
+  </div>
+
+
+<div class="translation">
+  <input [(ngModel)]="enteredWord" name="enteredWord">
+</div>
+  <button class="checkResultButton" (click)="compareWord()">Überprüfe</button>
+<div class="result">{{ resultMessage }}</div>
+</div>

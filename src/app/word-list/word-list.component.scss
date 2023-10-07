@@ -1,0 +1,24 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.word {
+  background-color: antiquewhite;
+  padding: 1em;
+  width: 40%;
+  margin: 1em
+}
+
+
+.germanWord, .translatedWord {
+  font-size: 2em;
+}
+
+.translatedWord {
+  font-style: italic;
+}
