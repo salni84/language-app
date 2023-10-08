@@ -80,6 +80,4 @@ export class RecordComponent {
 
     this.wordService.newWord(word).subscribe((word) => console.log(word))
   }
-
-
 }

@@ -1,9 +1,10 @@
-.record {
+.container {
+  display: grid;
   background-color: #00B7FF;
-  width: 80%;
+  height: 100%;
   margin: auto;
   align-content: center;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
 }
 

@@ -21,8 +21,21 @@ export class WordListComponent implements OnInit{
     })
   }
 
-  showTranslation(index: number) {
+  public showTranslation(index: number) {
+    console.log(index)
     this.visibleElement = index
     this.showTranslationAndAudio = !this.showTranslationAndAudio
+  }
+
+  public deleteWord(id: number) {
+    this.wordService.deleteWord(id).subscribe((id) => {
+      this.getWords()
+    } )
+  }
+
+  public getWords() {
+    this.wordService.readWords().subscribe((words) => {
+      this.words = words
+    })
   }
 }

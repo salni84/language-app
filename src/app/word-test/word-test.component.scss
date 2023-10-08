@@ -1,7 +1,9 @@
 .container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   background-color: cornflowerblue;
-  width: 50%;
-  margin: auto;
+  height: 100%;
   padding: 2em;
 }
 
@@ -12,12 +14,15 @@
 }
 
 
-button {
-  margin: 1em;
+.buttons {
+  display: flex;
+  height: 2em;
   padding: 1em;
 }
 
 input {
-  height: 2em;
+  height: 3em;
   width: auto;
+  font-size: 2em;
 }
+
