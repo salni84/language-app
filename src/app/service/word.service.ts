@@ -8,9 +8,9 @@ import { Word } from '../types/Word';
 })
 export class WordService {
 
-   SERVER_API = "http://localhost:3000/word";
+  // SERVER_API = "http://localhost:3000/word";
 
- //   SERVER_API = "https://language-express-0df724d1d304.herokuapp.com/word"
+   SERVER_API = "https://language-express-0df724d1d304.herokuapp.com/word"
 
   headers = {
     'Content-Type': 'application/json',
