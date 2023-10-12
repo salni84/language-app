@@ -1,24 +1,26 @@
 .homescreen, .welcome {
   display: grid;
   background-color: darkorange;
-  width: 100%;
   height: 100%;
   justify-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 1em;
+  align-items: center;
 }
 
 .title, .text {
   font-size: 2em;
+  justify-content: center;
 }
 
 .buttons {
-  margin: 1em;
+  margin: auto;
 
   .learn-words, .record-words, .word-test{
     margin: 1em;
-    height: 2em;
+    height: auto;
     font-size: 2em;
+    padding: 0.5em;
   }
 }
 

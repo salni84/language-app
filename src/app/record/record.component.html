@@ -1,13 +1,13 @@
-<div class="container">
-  <div class="nav">
-    <button routerLink="/learn">Zurück zum lernen</button>
-  </div>
+<div class="navigation">
+  <button class="back-button" routerLink="/learn">Zurück zum lernen</button>
+</div>
 
+<div class="container">
   <div class="newWord">
-    <span class="description">Gebe hier das deutsche Wort ein:</span>
+    <div class="description">Gebe hier das deutsche Wort ein:</div>
     <input type="text" name="germanWord" [(ngModel)]="germanWord" placeholder="deutsch">
 
-    <span class="description">Gebe hier das italienische Wort ein:</span>
+    <div class="description">Gebe hier das italienische Wort ein:</div>
     <input type="text" name="translation" [(ngModel)]="translation" placeholder="italienisch">
   </div>
 

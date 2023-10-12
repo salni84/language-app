@@ -1,10 +1,20 @@
 .container {
-  display: grid;
-  justify-content: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   background-color: cornflowerblue;
   height: 100%;
   padding: 2em;
+}
+
+.navigation {
+  padding: 1em;
+  background-color: cornflowerblue;
+}
+
+.back-button {
+  font-size: 1.5em;
+  padding: 0.5em;
 }
 
 .singleWord, .result {
@@ -13,10 +23,18 @@
   padding: 1em;
 }
 
+.translation {
+  align-items: center;
+}
 
 .buttons {
-  display: flex;
   height: 2em;
+  padding: 1em;
+}
+
+.checkResultButton, .nextWord {
+  font-size: 1.5em;
+  margin: 1em;
   padding: 1em;
 }
 

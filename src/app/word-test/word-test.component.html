@@ -1,16 +1,18 @@
+<div class="navigation">
+  <button class="back-button" routerLink="/">Zurück zur Übersicht</button>
+</div>
 <div class="container">
-  <a routerLink="/">Zurück zur Übersicht</a>
+
   <div class="singleWord">
     {{currentWord.word}}
   </div>
 
-
-<div class="translation">
-  <input [(ngModel)]="enteredWord" name="enteredWord">
-</div>
+  <div class="translation">
+    <input [(ngModel)]="enteredWord" name="enteredWord">
+  </div>
   <div class="buttons">
     <button class="checkResultButton" (click)="compareWord()">Überprüfe</button>
-    <button (click)="startTest()">neues Wort</button>
+    <button class="nextWord" (click)="startTest()">neues Wort</button>
   </div>
-<div class="result">{{ resultMessage }}</div>
+  <div class="result">{{ resultMessage }}</div>
 </div>

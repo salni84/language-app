@@ -26,6 +26,7 @@ export class WordTestComponent implements OnInit{
 
   public startTest() {
     this.resultMessage = '';
+    this.enteredWord = '';
     const randomIndex = Math.floor(Math.random() * (this.words?.length ?? 1))
     if (this.words){
       this.currentWord = this.words[randomIndex]
@@ -35,7 +36,6 @@ export class WordTestComponent implements OnInit{
   public compareWord() {
     if (this.enteredWord && this.enteredWord === this.currentWord.translation){
       this.resultMessage = 'Die Antwort ist korrekt!'
-      this.enteredWord = '';
     }
     else {
       this.resultMessage = 'Die Antwort ist leider falsch!'

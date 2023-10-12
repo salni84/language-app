@@ -1,5 +1,8 @@
+<div class="navigation">
+  <button class="back-button" routerLink="/">Zurück zur Übersicht</button>
+</div>
 <div class="container">
-  <a routerLink="/">Zurück zur Übersicht</a>
+
   <ng-container *ngFor="let word of words; index as i">
     <div class="word">
       <a (click)="deleteWord(word.id)"><i class="fa fa-trash-o" style="font-size:24px"></i></a>

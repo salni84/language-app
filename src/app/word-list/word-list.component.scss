@@ -1,22 +1,30 @@
-
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #00B7FF;
-  height: 100%;
+}
+.navigation {
+  padding: 1em;
+  background-color: #00B7FF;
 }
 
-
+.back-button {
+  font-size: 1.5em;
+  padding: 0.5em;
+}
 
 .word {
   background-color: antiquewhite;
   padding: 1em;
-  width: 40%;
+  max-width: 20em;
   height: 40%;
   margin: 1em
 }
 
+.audio-file {
+  margin-bottom: 1em;
+}
 
 .germanWord, .translatedWord {
   font-size: 2em;
@@ -26,7 +34,7 @@
   font-style: italic;
 }
 
-
 .showHideButton {
   margin: 1em;
+  font-size: 1.5em;
 }
