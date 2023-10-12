@@ -1,5 +1,5 @@
 <div class="navigation">
-  <button class="back-button" routerLink="/">Zurück zur Übersicht</button>
+  <button mat-raised-button color="primary" class="back-button" routerLink="/">Zurück zur Übersicht</button>
 </div>
 <div class="container">
 
@@ -10,14 +10,21 @@
   <div class="translation">
     <input [(ngModel)]="enteredWord" name="enteredWord">
   </div>
+  <div class="characters">
+    <button class="char" (click)="enterSpecialCharacter('è')">è</button>
+    <button class="char" (click)="enterSpecialCharacter('é')">é</button>
+    <button class="char" (click)="enterSpecialCharacter('ù')">ù</button>
+    <button class="char" (click)="enterSpecialCharacter('l\'')">l'</button>
+
+  </div>
   <div class="buttons">
-    <button class="checkResultButton" (click)="compareWord()">Überprüfe</button>
-    <button class="nextWord" (click)="startTest()">neues Wort</button>
+    <button mat-raised-button color="primary" class="checkResultButton" (click)="compareWord()">Überprüfe</button>
+    <button mat-raised-button color="accent" class="nextWord" (click)="startTest()">neues Wort</button>
   </div>
   <div class="result">{{ resultMessage }}</div>
 
   <div class="correctAnswer">
-    <button class="showAnswer" (click)="showCorrectAnswer()">Zeige korrekte Antwort</button>
+    <button mat-raised-button color="warn" class="showAnswer" (click)="showCorrectAnswer()">Zeige korrekte Antwort</button>
     <div class="answer" *ngIf="showAnswer">{{currentWord.translation}}</div>
   </div>
 </div>

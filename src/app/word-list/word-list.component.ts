@@ -12,6 +12,7 @@ export class WordListComponent implements OnInit{
   public words: Word[] | null = null;
   public showTranslationAndAudio: boolean = false;
   public visibleElement: number = 0
+  public isAdmin: boolean = false;
 
   constructor(private wordService: WordService) {}
 
@@ -19,10 +20,12 @@ export class WordListComponent implements OnInit{
     this.wordService.readWords().subscribe((word) => {
       this.words = word;
     })
+    if (localStorage.getItem('isAdmin') === 'true'){
+      this.isAdmin = true;
+    }
   }
 
   public showTranslation(index: number) {
-    console.log(index)
     this.visibleElement = index
     this.showTranslationAndAudio = !this.showTranslationAndAudio
   }

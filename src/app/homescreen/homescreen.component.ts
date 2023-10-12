@@ -7,8 +7,20 @@ import {Component} from '@angular/core';
   styleUrls: ['./homescreen.component.scss']
 })
 export class HomescreenComponent {
+  public enteredPassword: string;
+  public secret: string = 'admin'
+  public isAdmin: boolean = false;
 
 
+  public checkPassword() {
+    if (this.enteredPassword === this.secret){
+      localStorage.setItem('isAdmin', 'true')
+      this.isAdmin = true;
+    }
+  }
 
-
+  public logout(){
+    localStorage.clear()
+    this.isAdmin = false;
+  }
 }

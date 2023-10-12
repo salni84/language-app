@@ -32,7 +32,7 @@
   padding: 1em;
 }
 
-.checkResultButton, .nextWord {
+.checkResultButton, .nextWord, .showAnswer {
   font-size: 1.5em;
   margin: 1em;
 }
@@ -43,3 +43,11 @@ input {
   font-size: 2em;
 }
 
+.char {
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+.result {
+  margin: 1em
+}

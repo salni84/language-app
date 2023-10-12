@@ -21,22 +21,23 @@ export class WordTestComponent implements OnInit{
   ngOnInit(): void {
     this.wordService.readWords().subscribe((word) => {
       this.words = word;
-      this.currentWord = word[0]
+      const randomIndex = Math.floor(Math.random() * (this.words?.length ?? 1))
+      this.currentWord = word[randomIndex]
     })
   }
 
   public startTest() {
+    this.showAnswer = false;
     this.resultMessage = '';
     this.enteredWord = '';
     const randomIndex = Math.floor(Math.random() * (this.words?.length ?? 1))
     if (this.words){
       this.currentWord = this.words[randomIndex]
-      console.log(this.currentWord)
     }
   }
 
   public compareWord() {
-    if (this.enteredWord && this.enteredWord === this.currentWord.translation){
+    if (this.enteredWord && this.enteredWord.toLowerCase() === this.currentWord.translation.toLowerCase()){
       this.resultMessage = 'Die Antwort ist korrekt!'
     }
     else {
@@ -46,5 +47,12 @@ export class WordTestComponent implements OnInit{
 
   public showCorrectAnswer(){
     this.showAnswer = !this.showAnswer
+  }
+
+  public enterSpecialCharacter(char: string) {
+    if (this.enteredWord === null){
+      this.enteredWord = ''
+    }
+    this.enteredWord = this.enteredWord + char
   }
 }

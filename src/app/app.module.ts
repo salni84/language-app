@@ -10,6 +10,7 @@ import { RecordComponent } from './record/record.component';
 import { WordListComponent } from './word-list/word-list.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { WordTestComponent } from './word-test/word-test.component';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { WordTestComponent } from './word-test/word-test.component';
     HomescreenComponent,
     WordTestComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+        MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
