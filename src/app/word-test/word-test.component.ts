@@ -14,6 +14,7 @@ export class WordTestComponent implements OnInit{
   public enteredWord: string | null =  null;
   public currentWord: Word;
   public resultMessage: string;
+  public showAnswer: boolean;
 
 
   constructor(private wordService: WordService) {}
@@ -30,6 +31,7 @@ export class WordTestComponent implements OnInit{
     const randomIndex = Math.floor(Math.random() * (this.words?.length ?? 1))
     if (this.words){
       this.currentWord = this.words[randomIndex]
+      console.log(this.currentWord)
     }
   }
 
@@ -40,5 +42,9 @@ export class WordTestComponent implements OnInit{
     else {
       this.resultMessage = 'Die Antwort ist leider falsch!'
     }
+  }
+
+  public showCorrectAnswer(){
+    this.showAnswer = !this.showAnswer
   }
 }

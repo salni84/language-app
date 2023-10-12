@@ -33,6 +33,8 @@ export class RecordComponent {
   }
 
   startRecording() {
+    this.url = null;
+    this.blob = null;
     this.recording = true;
     let mediaConstraints = {
       video: false,

@@ -3,7 +3,7 @@
 </div>
 <div class="container">
 
-  <div class="singleWord">
+  <div class="singleWord" *ngIf="currentWord">
     {{currentWord.word}}
   </div>
 
@@ -15,4 +15,9 @@
     <button class="nextWord" (click)="startTest()">neues Wort</button>
   </div>
   <div class="result">{{ resultMessage }}</div>
+
+  <div class="correctAnswer">
+    <button class="showAnswer" (click)="showCorrectAnswer()">Zeige korrekte Antwort</button>
+    <div class="answer" *ngIf="showAnswer">{{currentWord.translation}}</div>
+  </div>
 </div>
