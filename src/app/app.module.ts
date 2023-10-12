@@ -11,6 +11,7 @@ import { WordListComponent } from './word-list/word-list.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { WordTestComponent } from './word-test/word-test.component';
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -20,14 +21,15 @@ import {MatButtonModule} from "@angular/material/button";
     HomescreenComponent,
     WordTestComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        FormsModule,
-        MatButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    MatButtonModule,
+    MatCardModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,21 +4,28 @@
 <div class="container">
 
   <ng-container *ngFor="let word of words; index as i">
-    <div class="word">
-      <a *ngIf="isAdmin" (click)="deleteWord(word.id)"><i class="fa fa-trash-o" style="font-size:24px"></i></a>
-      <p class="germanWord">{{word.word}}</p>
+    <mat-card>
+      <mat-card-content>
+        <div class="word">
+          <a *ngIf="isAdmin" (click)="deleteWord(word.id)"><i class="fa fa-trash-o" style="font-size:24px"></i></a>
+          <p class="germanWord">{{word.word}}</p>
 
-      <div class="hideAndShow" [hidden]="visibleElement !== i" *ngIf="showTranslationAndAudio">
+          <div class="hideAndShow" [hidden]="visibleElement !== i" *ngIf="showTranslationAndAudio">
 
-        <p class="translatedWord"><b>{{word.translation}}</b></p>
+            <p class="translatedWord"><b>{{word.translation}}</b></p>
 
-        <audio class="audio-file" controls *ngIf="word.audio">
-          <source [src]="word.audio" type="audio/wav">
-        </audio>
+            <audio class="audio-file" controls *ngIf="word.audio">
+              <source [src]="word.audio" type="audio/wav">
+            </audio>
 
-      </div>
-      <button class="showHideButton" (click)="showTranslation(i)">{{'Aufdecken / Zudecken'}}</button>
-    </div>
+          </div>
+          <button mat-raised-button color="accent" class="showHideButton" (click)="showTranslation(i)">{{'Aufdecken / Zudecken'}}</button>
+        </div>
+
+      </mat-card-content>
+
+    </mat-card>
+
   </ng-container>
 </div>
 
