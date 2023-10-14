@@ -28,5 +28,10 @@
   <div class="correctAnswer">
     <button mat-raised-button color="warn" class="showAnswer" (click)="showCorrectAnswer()">Zeige korrekte Antwort</button>
     <div class="answer" *ngIf="showAnswer">{{currentWord.translation}}</div>
+    <div *ngIf="resultMessage" class="audio">
+      <audio class="audio-file" controls *ngIf="currentWord.audio">
+        <source [src]="currentWord.audio" type="audio/wav">
+      </audio>
+    </div>
   </div>
 </div>
