@@ -11,27 +11,8 @@
     <input type="text" name="translation" [(ngModel)]="translation" placeholder="italienisch">
   </div>
 
-  <div class="audio-record" *ngIf="!recording">
-    <button (click)="startRecording()">Neues Word aufnehmen
-      <i class="fa fa-microphone" style="font-size: 50px; color: black"></i>
-    </button>
-  </div>
-
-  <div class="audio-stop" *ngIf="recording">
-    <p class="audio-placeholder" style="color: red">Klicke stop um die Aufzeichnung zu beenden!</p>
-
-    <button (click)="stopRecording()">stop
-      <i class="fa fa-microphone" style="font-size: 50px; color: red"></i>
-    </button>
-  </div>
-
-  <audio class="audio-file" controls *ngIf="url">
-    <source [src]="sanitize(url)" type="audio/wav">
-  </audio>
-
   <div class="save-record" *ngIf="url">
-    <span class="save-description">Speichere die Aufzeichnung wenn du damit zufrieden bist.</span>
-    <button class="save-button" (click)="saveAudioFile()">Speichern</button>
+    <button class="save-button" (click)="saveWord()">Speichern</button>
   </div>
 </div>
 

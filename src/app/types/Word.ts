@@ -4,5 +4,4 @@ export class Word {
   word: string;
   translation: string;
   audio: string;
-
 }
